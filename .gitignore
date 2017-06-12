@@ -51,3 +51,7 @@ jspm_packages
 
 # Idea
 .idea
+
+# Release
+
+/client/release

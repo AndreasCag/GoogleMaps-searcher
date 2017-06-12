@@ -1,5 +1,4 @@
-@import "main";
-@import "../../node_modules/bulma/bulma";
+@import "./main";
 @import "./searchMenu";
 @mixin spinner-size() {
   width: 20vw;
