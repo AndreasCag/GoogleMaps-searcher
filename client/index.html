@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Map</title>
+    <link rel="icon" href="./imgs/logo.png">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="./release/scss.entry.js"></script>
+
+</head>
+<body>
+<div id="map"></div>
+<div id="flexSpinnerContainer" class="mainFlex">
+    <div class="flexItem">
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+</div>
+<div id="app">
+    <div id="searchMenu" hide-name="menuS">
+        <div class="field is-grouped map-class-container">
+            <p class="control">
+                <label class="checkbox">
+                    <input type="checkbox" value="restaurant" v-model="selectedClasses"><i class="fa fa-cutlery" aria-hidden="true"></i>
+                </label>
+            </p>
+            <p class="control">
+                <label class="checkbox">
+                    <input type="checkbox" value="cafe" v-model="selectedClasses"><i class="fa fa-coffee" aria-hidden="true"></i>
+                </label>
+            </p>
+            <p class="control">
+                <label class="checkbox">
+                    <input type="checkbox" value="park" v-model="selectedClasses"><i class="fa fa-tree" aria-hidden="true"></i>
+                </label>
+            </p>
+        </div>
+        <div class="field is-grouped map-class-container">
+            <p class="control">
+                <label class="checkbox">
+                    <input type="checkbox" value="taxi_stand" v-model="selectedClasses"><i class="fa fa-taxi" aria-hidden="true"></i>
+                </label>
+            </p>
+            <p class="control">
+                <label class="checkbox">
+                    <input type="checkbox" value="store" v-model="selectedClasses"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                </label>
+            </p>
+            <p class="control">
+                <label class="checkbox">
+                    <input type="checkbox" value="bank" v-model="selectedClasses"><i class="fa fa-university" aria-hidden="true"></i>
+                </label>
+            </p>
+        </div>
+        <div class="field is-grouped button-container">
+
+            <p class="control">
+                <button class="button clear-button" v-on:click="clear">Clear</button>
+            </p>
+            <p class="control">
+                <button class="button find-button" v-on:click="getPlaces">Find</button>
+            </p>
+        </div>
+    </div>
+
+
+    <button class="hiding-button" v-hide-for="'menuS'">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </button>
+
+</div>
+</body>
+<script defer src="./release/app.entry.js"></script>
+<script defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqO3iHoVKWwTxbVDPuHDWF4R4Vxe8nEJA&libraries=places&callback=mainModule.initMap">
+</script>
+</html>

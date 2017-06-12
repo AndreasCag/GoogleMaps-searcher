@@ -1,0 +1,28 @@
+@mixin full-screen() {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+}
+
+#map {
+  @include full-screen;
+}
+
+body {
+  overflow: hidden;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+body::-webkit-scrollbar {
+  width: 0 !important
+}
+
+html {
+  overflow: hidden;
+}
+
+
+.hide {
+  display: none;
+}

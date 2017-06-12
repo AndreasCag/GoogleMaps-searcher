@@ -1,0 +1,54 @@
+@import "main";
+@import "../../node_modules/bulma/bulma";
+@mixin spinner-size() {
+  width: 20vw;
+  height: 20vw;
+}
+
+.mainFlex {
+  @include full-screen;
+
+  display: flex;
+  justify-content: space-around;
+  .flexItem {
+    align-self: center;
+
+    @include spinner-size;
+
+    .item {
+      z-index: 100;
+      @include spinner-size;
+
+      position: absolute;
+      border-radius: 50%;
+      border-left-width: 8px;
+      border-left-style: solid;
+      &:first-child {
+        animation: spinner 2s linear infinite, colorize 5s linear infinite alternate;
+      }
+      &:last-child {
+        animation: spinner 5s linear infinite, colorize 5s linear infinite alternate;
+      }
+    }
+  }
+
+  @keyframes spinner {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes colorize {
+    0% {
+      border-color: #4e2e77;
+    }
+    50% {
+      border-color: #de1a1a;
+    }
+    100% {
+      border-color: #e5ba38;
+    }
+  }
+}
+
+@import "./searchMenu";
