@@ -49,9 +49,5 @@ jspm_packages
 # Sass cache
 .sass-cache
 
-
 # Idea
 .idea
-
-# Client release
-/client/release/
