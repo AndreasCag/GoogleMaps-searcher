@@ -1,17 +1,21 @@
 {
-  "name": "test-google-maps",
-  "version": "1.0.0",
-  "description": "",
-  "main": "./server/server.js",
+  "name": "googleMaps-searcher",
+  "version": "1.0.1",
+  "description": "Simple searcher for Google Maps",
+  "main": "./index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon ./server.js --ignore client/",
-    "production":"webpack --config ./webpack.config.production.js --optimize-minimize",
-    "development":"webpack --config ./webpack.config.development.js --watch"
+    "production": "webpack --config ./webpack.config.production.js --optimize-minimize",
+    "development": "webpack --config ./webpack.config.development.js --watch"
   },
-  "author": "",
+  "author": "AndreasCag",
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "bulma": "^0.4.2",
+    "express": "^4.15.3",
+    "socket.io": "^2.0.2",
+    "vue": "^2.3.4",
     "babel-core": "^6.25.0",
     "babel-loader": "^7.0.0",
     "babel-preset-env": "^1.5.2",
@@ -20,11 +24,5 @@
     "sass-loader": "^6.0.5",
     "style-loader": "^0.18.2",
     "webpack": "^2.6.1"
-  },
-  "dependencies": {
-    "babel-plugin-transform-object-rest-spread": "^6.23.0",
-    "bulma": "^0.4.2",
-    "express": "^4.15.3",
-    "socket.io": "^2.0.2"
   }
 }
